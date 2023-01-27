@@ -16,6 +16,4 @@ public class Record {
         this.telephone = telephone;
         this.sex = sex;
     }
-
-
 }

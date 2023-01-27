@@ -21,7 +21,7 @@ package ru.gb;
 пользователю выведено сообщение с информацией, что именно неверно.
 Если всё введено и обработано верно, должен создаться файл с названием,
 равным фамилии, в него в одну строку должны записаться полученные данные, вида
-<Фамилия><Имя><Отчество><датарождения> <номертелефона><пол>
+<Фамилия><Имя><Отчество><датарождения><номертелефона><пол>
 Однофамильцы должны записаться в один и тот же файл, в отдельные строки.
 Не забудьте закрыть соединение с файлом.
 При возникновении проблемы с чтением-записью в файл,
@@ -29,8 +29,17 @@ package ru.gb;
 пользователь должен увидеть стектрейс ошибки.
 */
 
+
 public class Program {
     public static void main(String[] args) {
+
+        PersonDataValidator pdc = new PersonDataValidator();
+        System.out.println(pdc.phoneValidator().isValid("123"));
+        System.out.println(pdc.dateValidator().isValid("123"));
+        System.out.println(pdc.sexValidator().isValid("123"));
+
+        RecordStringParser rsp = new RecordStringParser("asdf wert ghfj zxc");
+        rsp.countCheck();
 
     }
 }
