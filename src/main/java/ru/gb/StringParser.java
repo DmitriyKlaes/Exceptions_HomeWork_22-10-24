@@ -8,7 +8,7 @@ public class StringParser {
     private Map<Integer, String> parsedMapForRecord;
 
     public StringParser(String stringFromUser) {
-        this.splitArrayFromUserString = stringFromUser.split(" ");
+        this.splitArrayFromUserString = stringFromUser.replaceAll("\\s+", " ").split(" ");
         this.validator = new PersonDataValidator();
         this.parsedMapForRecord = new TreeMap<>();
     }
