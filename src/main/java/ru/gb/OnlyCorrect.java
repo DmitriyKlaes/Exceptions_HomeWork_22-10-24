@@ -3,7 +3,6 @@ package ru.gb;
 import java.util.Scanner;
 
 public class OnlyCorrect {
-
     public static int correctInt(int minValue, int maxValue) {
         int resultValue;
         Scanner scanner = new Scanner(System.in);
@@ -20,10 +19,5 @@ public class OnlyCorrect {
                 System.out.printf("Неверное значение! Введите цифру от %d до %d: ", minValue, maxValue);
             }
         }
-    }
-
-    public static void main(String[] args) {
-        correctInt(1,3);
-
     }
 }
